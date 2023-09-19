@@ -13,19 +13,20 @@ export default function Card() {
       number: "Jersey number 23",
     },
     {
-      id: "1",
+      id: "3",
       src: "https://api.time.com/wp-content/uploads/2014/10/457287220.jpg",
-      name: "Lebron James",
+      name: "LeBron James",
       number: "Jersey number 23",
     },
   ];
+
   return (
-    <div class="container">
-      <div class="card-container">
+    <div className=" relative flex justify-center pt-20">
+      <div className="flex justify-between space-x-4">
         {Data.map((item) => {
           return (
-            <div class="card">
-              <img src={item.src} alt="This is a card" />
+            <div key={item.id} className="card px-8 py-8 bg-orange-500 rounded-md text-center shadow-gray-800 shadow-lg">
+              <img className="max-w-xs max-h-xs rounded-md" src={item.src} alt="This is a card" />
               <h3>{item.name}</h3>
               <p>{item.number}</p>
             </div>

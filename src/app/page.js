@@ -8,7 +8,7 @@ import Form from "./components/form";
 
 export default function Home() {
   return (
-    <main className="main">
+    <main className="flex flex-col   mx-auto max-w-7xl" >
       <Banner/>
       <Card/>
       <Form/>

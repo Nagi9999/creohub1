@@ -21,7 +21,7 @@ export default function Card() {
   ];
 
   return (
-    <div className=" relative flex justify-center pt-20">
+    <div className="  flex justify-center pt-20">
       <div className="flex justify-between space-x-4">
         {Data.map((item) => {
           return (

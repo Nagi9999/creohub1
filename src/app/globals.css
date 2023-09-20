@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+
+/* responsive */
+@media screen and (max-width: 700px) {
+
+  .navbar .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+  padding-left: 10px;
+  }
+
+  .banner {
+    height: 70vh;
+  margin-right: 0px; 
+}
+
+  .overlay-text{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    }
+
+  .overlay-text h1 {
+    font-size: 24px;
+    text-align: center;
+    
+
+  }
+
+  .overlay-text p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+ 
+  .card{
+    margin-top: 30px;
+  }
+  
+
+  .contact-form h2 {
+    font-size: 16px;
+  }
+
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+  input[type="text"],
+input[type="email"],
+textarea {
+  width: 180px;
+  padding: 10px;
+}
+
+
+ 
+  
+} 

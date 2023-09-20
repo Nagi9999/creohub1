@@ -25,7 +25,7 @@ export default function Card() {
       <div className="flex justify-between space-x-4">
         {Data.map((item) => {
           return (
-            <div key={item.id} className="card px-8 py-8 bg-orange-500 rounded-md text-center shadow-gray-800 shadow-lg">
+            <div key={item.id} className="px-8 py-8 bg-orange-500 rounded-md text-center shadow-gray-800 shadow-lg">
               <img className="max-w-xs max-h-xs rounded-md" src={item.src} alt="This is a card" />
               <h3>{item.name}</h3>
               <p>{item.number}</p>

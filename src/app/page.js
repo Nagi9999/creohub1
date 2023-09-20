@@ -1,17 +1,15 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
+
 
 //components
-import Banner from "./components/banner";
-import Card from "./components/card";
-import Form from "./components/form";
+
+import Index from "./pages/index/page";
+
 
 export default function Home() {
   return (
-    <main className="flex flex-col   mx-auto" >
-      <Banner/>
-      <Card/>
-      <Form/>
-      </main>
+    <main className="flex flex-col   mx-auto 2xl:container " >
+      <Index/>
+    </main>
   );
 }

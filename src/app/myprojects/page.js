@@ -18,21 +18,21 @@ const Project = () => {
       </Banner>
       <Text>
         <h1 class="font-bold text-xl"> E-commerce Website</h1>
-        <p>
+        <p class="sm:text-2xl text-lg ">
           Description: Developed a fully functional e-commerce website using
           React and Node.js. Implemented user authentication, product catalog,
           shopping cart, and payment processing. The project resulted in a
           responsive and user-friendly online store.
         </p>
         <h1 class="font-bold text-xl">Task Management App </h1>
-        <p>
+        <p class="sm:text-2xl text-lg ">
           Description: Created a task management web application using Vue.js
           and Firebase. Users can organize their tasks, set deadlines, and
           collaborate with team members. The app's real-time synchronization
           feature ensures up-to-date task tracking
         </p>
         <h1 class="font-bold text-xl">Weather Forecast App </h1>
-        <p>
+        <p class="sm:text-2xl text-lg ">
           Description: Built a weather forecast mobile app with Flutter. The app
           provides accurate weather forecasts based on user location. Users can
           view current conditions, hourly, and weekly forecasts, making it easy

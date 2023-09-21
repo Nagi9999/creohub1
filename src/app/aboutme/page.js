@@ -16,25 +16,25 @@ const AboutMe = () => {
       <Text>
         
         <div>
-          <p className="text-2xl m-0">
+          <p className="sm:text-2xl text-lg m-0">
             Hi, I'm Naji El Hakim ! I'm a passionate developer with a love for
             technology and programming. I have a basic background in web
             development .
           </p>
-          <p className="text-2xl m-0">
+          <p className="sm:text-2xl text-lg m-0">
             My journey with programming began during my internship at CreoShift,
             where I had the opportunity to work on exciting projects and develop
             my skills.
           </p>
-          <p className="text-2xl m-0">
+          <p className="sm:text-2xl text-lg m-0">
             In addition to coding, I have a strong passion for playing
             basketball and maintaining a healthy lifestyle by going to the gym.
           </p>
-          <p className="text-2xl m-0">
+          <p className="sm:text-2xl text-lg m-0">
             I'm always eager to learn and take on new challenges in the
             ever-evolving field of web development.
           </p>
-          <p className="text-2xl m-0">
+          <p className="sm:text-2xl text-lg m-0">
             Feel free to explore my portfolio to see some of the projects I've
             worked on. If you'd like to get in touch or collaborate on a
             project, don't hesitate to reach out via the contact form.

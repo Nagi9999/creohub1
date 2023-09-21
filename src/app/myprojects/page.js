@@ -9,10 +9,10 @@ const Project = () => {
           "https://www.interviewbit.com/blog/wp-content/uploads/2022/01/Product-Landing-Page-550x440.png"
         }
       >
-        <h1 className="text-5xl my-12 font-serif text-black bg-gray-50">
+        <h1 className="sm:text-5xl text-xl my-12 font-serif text-black bg-gray-50">
           My software development projects
         </h1>
-        <p className="text-2xl m-0 text-black bg-gray-50">
+        <p className="sm:text-2xl text-sm m-0 text-black bg-gray-50">
           Here's some of my projects:
         </p>
       </Banner>

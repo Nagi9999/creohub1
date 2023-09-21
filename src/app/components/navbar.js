@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-orange-500 text-black text-lg py-2">
-      <div className="2xl:container flex justify-between items-center mx-auto px-4">
+    <nav className="fixed top-0 w-full bg-orange-500 text-black sm:text-lg text-sm py-2">
+      <div className="2xl:container flex justify-between items-center mx-auto sm:px-4 px-10">
         <Link href="/">
           <span className="flex items-center text-black no-underline">
             <img
@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="font-bold ml-2">Naji El Hakim</div>
           </span>
         </Link>
-        <ul className="flex space-x-4">
+        <ul className="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-x-4">
           <li>
             <Link href="/aboutme">
               <span className="text-black hover:text-gray-500 cursor-pointer">

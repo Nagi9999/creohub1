@@ -1,7 +1,7 @@
 // Banner.js
 export default function Banner({ imageSrc, children }) {
   return (
-    <div className="relative banner z-[-1]">
+    <div className="relative banner sm:mt-8 mt-12 z-[-1]">
       <div>
         <img
           className="w-full max-h-[80vh] object-cover"

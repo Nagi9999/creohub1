@@ -21,8 +21,8 @@ export default function Card() {
   ];
 
   return (
-    <div className="  flex justify-center pt-20">
-      <div className="flex justify-between space-x-4">
+    <div className="  flex justify-center pt-20 ">
+      <div className="flex sm:flex-row flex-col justify-between sm:space-x-4 space-x-0 sm:space-y-0 space-y-4 ">
         {Data.map((item) => {
           return (
             <div key={item.id} className="px-8 py-8 bg-orange-500 rounded-md text-center shadow-gray-800 shadow-lg">

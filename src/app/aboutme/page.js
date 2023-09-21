@@ -10,8 +10,8 @@ const AboutMe = () => {
           "https://www.bolton.ac.uk/assets/Uploads/Is-a-Computer-Science-Degree-Worth-it-University-of-Bolton-v2.jpg"
         }
       >
-        <h1 className="text-5xl my-12 font-serif text-orange-200">About Me</h1>
-        <p className="text-2xl m-0 text-orange-200">Learn more about me.</p>
+        <h1 className="sm:text-5xl text-xl my-12 font-serif text-orange-200">About Me</h1>
+        <p className="sm:text-2xl text-sm m-0 text-orange-200">Learn more about me.</p>
       </Banner>
       <Text>
         

@@ -4,6 +4,7 @@ import Text from "../../components/text";
 const AboutMe = () => {
   return (
     <main className="flex flex-col   mx-auto 2xl:container ">
+      
       <Banner
         imageSrc={
           "https://www.bolton.ac.uk/assets/Uploads/Is-a-Computer-Science-Degree-Worth-it-University-of-Bolton-v2.jpg"

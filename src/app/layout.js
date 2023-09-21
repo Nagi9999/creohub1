@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html  lang="en">
       
       <Navbar/>
-      <body className={inter.className} class="m-0 text-0 font-helvetica bg-gray-300 w-screen h-screen ">
+      <body className={inter.className} class="m-0 text-0 font-helvetica bg-gray-300 w-screen h-screen z-[-1]">
         
         {children}
         <Footer/>

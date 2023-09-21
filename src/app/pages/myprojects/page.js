@@ -2,6 +2,7 @@ import Banner from "../../components/banner";
 import Text from "../../components/text";
 
 const Project = () => {
+ 
   return (
     <main className="flex flex-col   mx-auto 2xl:container ">
       <Banner imageSrc={

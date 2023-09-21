@@ -1,5 +1,5 @@
-import Banner from "../../components/banner";
-import Text from "../../components/text";
+import Banner from "../components/banner";
+import Text from "../components/text";
 
 const Project = () => {
  

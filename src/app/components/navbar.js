@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full bg-orange-500 text-black text-lg py-2">
-      <div className="container 2xl flex justify-between items-center mx-auto">
+      <div className="2xl:container flex justify-between items-center mx-auto px-4">
         <Link href="/">
           <span className="flex items-center text-black no-underline">
             <img
@@ -16,21 +16,21 @@ export default function Navbar() {
         </Link>
         <ul className="flex space-x-4">
           <li>
-            <Link href="/pages/aboutme">
+            <Link href="/aboutme">
               <span className="text-black hover:text-gray-500 cursor-pointer">
                 About Me
               </span>
             </Link>
           </li>
           <li>
-            <Link href="/pages/myprojects">
+            <Link href="/myprojects">
               <span className="text-black hover:text-gray-500 cursor-pointer">
                 My Projects
               </span>
             </Link>
           </li>
           <li>
-            <Link href="/pages/contactme">
+            <Link href="/contactme">
               <span className="text-black hover:text-gray-500 cursor-pointer">
                 Contact Me
               </span>

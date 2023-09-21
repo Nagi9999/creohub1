@@ -1,6 +1,6 @@
-import Banner from "../../components/banner";
-import Card from "../../components/card";
-import Form from "../../components/form";
+import Banner from "../components/banner";
+import Card from "../components/card";
+import Form from "../components/form";
 
 const Index = () => {
   return (

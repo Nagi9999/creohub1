@@ -14,7 +14,7 @@ export default function Navbar() {
             <div className="font-bold ml-2">Naji El Hakim</div>
           </span>
         </Link>
-        <ul className="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-x-4">
+        <ul className="flex sm:flex-row flex-col sm:space-x-4 space-x-0 sm:space-y-0 space-y-2">
           <li>
             <Link href="/aboutme">
               <span className="text-black hover:text-gray-500 cursor-pointer">

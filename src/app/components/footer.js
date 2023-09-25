@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     
     <footer >
-    <div class=" bg-orange-500 text-white text-center w-full py-2">
+    <div class=" bg-orange-500 text-white text-center w-full py-2  ">
       <div class=" space-x-4 flex justify-center items-center">
         <a href="www.facebook.com" class="no-underline text-white">
           <img src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_Facebook_svg-512.png" alt="Facebook" class="w-6 h-6" />

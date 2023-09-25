@@ -10,8 +10,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-orange-500 text-black sm:text-lg text-sm py-2">
-      <div className="2xl:container flex justify-between items-center mx-auto sm:px-4 px-10">
+    <nav className="fixed top-0 w-full bg-orange-500 text-black sm:text-lg text-sm py-2 z-20 ">
+     
+     <div className="sm:flex justify-between">
+     <div className="2xl:container flex justify-between items-center mx-auto sm:px-4 px-10">
         <Link href="/">
           <span className="flex items-center text-black no-underline">
             <img
@@ -24,7 +26,7 @@ export default function Navbar() {
         </Link>
 
         
-        <div className="sm:hidden">
+        <div className="sm:hidden ">
           <button
             onClick={toggleMenu}
             className="text-black hover:text-gray-500 cursor-pointer focus:outline-none"
@@ -51,8 +53,11 @@ export default function Navbar() {
           </button>
         </div>
 
+     </div>
+      
+
         
-        <ul className={`sm:flex sm:flex-row flex-col ${menuOpen ? 'block' : 'hidden'} sm:space-x-4 space-x-0 sm:space-y-0 space-y-2`}>
+     <ul className={`sm:flex sm:flex-row flex-col justify-center items-center ${menuOpen ? 'flex' : 'hidden'} sm:space-x-4 space-x-0 sm:space-y-0 space-y-2 mt-3`}>
           <li>
             <Link href="/aboutme">
               <span className="text-black hover:text-gray-500 cursor-pointer">

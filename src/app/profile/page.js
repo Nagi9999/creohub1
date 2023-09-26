@@ -61,7 +61,7 @@ const Index = () => {
         </p>
       </Banner>
 
-      <div className="flex flex-col items-center  mt-8 mb-8 bg-orange-200 sm:mx-16 mx-3 sm:px-12 px-3.5 sm:py-3 py-3.5  ">
+      <div className="flex flex-col items-center 2xl:container mt-8 mb-8 bg-orange-200 mx-auto sm:px-12 px-3.5 sm:py-3 py-3.5  ">
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>Kobe Bryant</AccordionHeader>
         <AccordionBody className="text-lg">

@@ -1,10 +1,9 @@
-// src/components/Banner.js
 import React from "react";
 
 export default function Banner({ imageSrc, children, fullScreen }) {
   const bannerStyle = {
     margin: fullScreen ? "0" : "0 auto",
-    width: fullScreen ? "100vw" : "100%", // Use viewport width when fullScreen
+    width: fullScreen ? "100vw" : "100%", 
   };
 
   return (

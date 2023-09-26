@@ -1,7 +1,7 @@
 "use client"
-import Banner from "../components/Banner";
-import Card from "../components/Card";
-import Form from "../components/Form";
+import Banner from "../components/banner";
+import Card from "../components/card";
+import Form from "../components/form";
 import React, { useState, useEffect } from "react";
 import {
   Accordion,

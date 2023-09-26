@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Banner({ imageSrc, children, fullScreen }) {
   const bannerStyle = {
-    margin: fullScreen ? "0" : "0 auto", // Center the banner horizontally with equal margins
-    width: fullScreen ? "100%" : "100%", // Use full width when fullScreen is true
+    margin: fullScreen ? "0" : "0 auto",
+    width: fullScreen ? "100vw" : "100%", // Use viewport width when fullScreen
   };
 
   return (

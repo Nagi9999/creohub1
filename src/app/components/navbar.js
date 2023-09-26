@@ -1,16 +1,32 @@
-"use client";
+"use client"
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState, useEffect  } from "react";
+
+
+import { usePathname } from 'next/navigation'
+
+const paths = [
+ 
+  { path: "/aboutme", name: "About Me" },
+  { path: "/myprojects", name: "My Projects" },
+  { path: "/contactme", name: "Contact Me" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedLink, setSelectedLink] = useState(""); 
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setSelectedLink(pathname);
+  }, [pathname]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-orange-500 text-black sm:text-lg text-sm py-2 z-20 ">
+    <nav className="fixed top-0 w-full bg-orange-500 text-black sm:text-lg text-sm py-2 z-20">
       <div className="sm:flex justify-between">
         <div className="2xl:container flex justify-between items-center mx-auto sm:px-4 px-10">
           <Link href="/">
@@ -24,7 +40,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="sm:hidden ">
+          <div className="sm:hidden">
             <button
               onClick={toggleMenu}
               className="text-black hover:text-gray-500 cursor-pointer focus:outline-none"
@@ -51,63 +67,43 @@ export default function Navbar() {
             </button>
           </div>
           <div className="hidden sm:block">
-            <ul
-              className={`sm:flex sm:flex-row flex-col justify-center items-center ${
-                menuOpen ? "flex" : "hidden"
-              } sm:space-x-4 space-x-0 sm:space-y-0 space-y-2 mt-3`}
-            >
-              <li>
-                <Link href="/aboutme">
-                  <span className="text-black hover:text-gray-500 cursor-pointer">
-                    About Me
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/myprojects">
-                  <span className="text-black hover:text-gray-500 cursor-pointer">
-                    My Projects
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/contactme">
-                  <span className="text-black hover:text-gray-500 cursor-pointer">
-                    Contact Me
-                  </span>
-                </Link>
-              </li>
+            <ul className="sm:flex sm:flex-row flex-col justify-center items-center sm:space-x-4 space-x-0 sm:space-y-0 space-y-2 mt-3">
+              {paths.map((item) => (
+                <li key={item.path}>
+                  <Link href={item.path}>
+                    <span
+                      className={`${
+                        selectedLink === item.path
+                          ? "text-gray-500"
+                          : "text-black"
+                      } hover:text-gray-500 cursor-pointer`}
+                      onClick={() => handleLinkClick(item.path)}
+                    >
+                      {item.name}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="sm:hidden">
-          <ul
-            className={`sm:flex sm:flex-row flex-col justify-center items-center ${
-              menuOpen ? "flex" : "hidden"
-            } sm:space-x-4 space-x-0 sm:space-y-0 space-y-2 mt-3`}
-          >
-            <li>
-              <Link href="/aboutme">
-                <span className="text-black hover:text-gray-500 cursor-pointer">
-                  About Me
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/myprojects">
-                <span className="text-black hover:text-gray-500 cursor-pointer">
-                  My Projects
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/contactme">
-                <span className="text-black hover:text-gray-500 cursor-pointer">
-                  Contact Me
-                </span>
-              </Link>
-            </li>
-          </ul>
+           <ul
+    className={`sm:flex sm:flex-row flex-col justify-center items-center ${
+      menuOpen ? "flex" : "hidden"
+    } sm:space-x-4 space-x-0 sm:space-y-0 space-y-2 mt-3`}
+  >
+    {paths.map((item) => (
+      <li key={item.path}>
+        <Link href={item.path}>
+          <span className={`${pathname === item.path ? 'text-gray-500' : 'text-black'} hover:text-gray-500 cursor-pointer`}>
+            {item.name}
+          </span>
+        </Link>
+      </li>
+    ))}
+  </ul>
+
         </div>
       </div>
     </nav>

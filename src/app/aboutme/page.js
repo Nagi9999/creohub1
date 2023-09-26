@@ -1,7 +1,8 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import Banner from "../components/banner";
 import Text from "../components/text";
+import Navbar from '../components/navbar'
 
 const AboutMe = () => {
   const [selectedItem, setSelectedItem] = useState(null);
@@ -46,12 +47,39 @@ const AboutMe = () => {
     setSelectedItem(items[index]);
   };
 
+
+  
+const [open, setOpen] = useState(0);
+const [isFullScreen, setIsFullScreen] = useState(false);
+
+const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+useEffect(() => {
+  const handleZoomChange = () => {
+    const zoomLevelThreshold = 1.0;
+    const currentZoomLevel = window.devicePixelRatio || 1;
+
+    setIsFullScreen(currentZoomLevel < zoomLevelThreshold);
+  };
+
+  window.addEventListener("resize", handleZoomChange);
+
+  handleZoomChange();
+
+  return () => {
+    window.removeEventListener("resize", handleZoomChange);
+  };
+}, []);
+
+
   return (
-    <main className="flex flex-col mx-auto 2xl:container">
+    <main className="flex flex-col mx-auto ">
+          <Navbar/>
       <Banner
         imageSrc={
           "https://www.bolton.ac.uk/assets/Uploads/Is-a-Computer-Science-Degree-Worth-it-University-of-Bolton-v2.jpg"
         }
+        fullScreen={isFullScreen}
       >
         <h1 className="sm:text-5xl text-xl my-12 font-serif text-orange-200">About Me</h1>
         <p className="sm:text-2xl text-sm m-0 text-orange-200">Learn more about me.</p>

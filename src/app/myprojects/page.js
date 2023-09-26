@@ -1,7 +1,9 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import Banner from "../components/banner";
 import Text from "../components/text";
+import Navbar from '../components/navbar'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
@@ -45,12 +47,36 @@ const Project = () => {
     },
   ];
 
+  const [open, setOpen] = useState(0);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
+  const handleOpen = (value) => setOpen(open === value ? 0 : value);
+
+  useEffect(() => {
+    const handleZoomChange = () => {
+      const zoomLevelThreshold = 1.0;
+      const currentZoomLevel = window.devicePixelRatio || 1;
+
+      setIsFullScreen(currentZoomLevel < zoomLevelThreshold);
+    };
+
+    window.addEventListener("resize", handleZoomChange);
+
+    handleZoomChange();
+
+    return () => {
+      window.removeEventListener("resize", handleZoomChange);
+    };
+  }, []);
+  
   return (
-    <main className="flex flex-col mx-auto 2xl:container">
+    <main className="flex flex-col mx-auto ">
+      
       <Banner
         imageSrc={
           "https://www.interviewbit.com/blog/wp-content/uploads/2022/01/Product-Landing-Page-550x440.png"
         }
+        fullScreen={isFullScreen}
       >
         <h1 className="sm:text-5xl text-xl my-12 font-serif text-black bg-gray-50">
           My software development projects
